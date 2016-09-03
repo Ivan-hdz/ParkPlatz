@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.lynden.gmapsfx.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="774.0" prefWidth="773.0" snapToPixel="true" style="" styleClass="fondoOscuro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Registrar_EstacionamientoController">
+  <children>
+    <GridPane hgap="10.0" prefHeight="774.0" prefWidth="773.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label text="Correo electronico: " GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <textFill>
+            <Color blue="0.980" green="0.980" red="0.980" fx:id="x2" />
+          </textFill>
+        </Label>
+        <TextField fx:id="correo" promptText="ejemplo@ejemplo.com" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+          <stylesheets>
+            <URL value="@css/styles.css" />
+          </stylesheets>
+        </TextField>
+        <Label text="Contraseña: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+        <Label text="Nombre del propietario: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+        <Label text="Apellido del propietario: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+        <TextField fx:id="aPaterno" promptText="A. Paterno" styleClass="input" text="" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <TextField fx:id="aMaterno" promptText="A. Materno" styleClass="input" text="" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <TextField fx:id="nombre" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+        <Label text="Nombre del estacionamiento: " textFill="$x2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+        <Label text="Datos del estacionamiento" textFill="$x2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+          <font>
+            <Font size="18.0" fx:id="x1" />
+          </font>
+        </Label>
+        <TextField fx:id="nombreEst" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+        <Label font="$x1" minHeight="21.999908447265625" prefHeight="21.999908447265625" prefWidth="238.0" text="Datos personales" textFill="$x2" GridPane.columnSpan="2" />
+        <Label text="Calle: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+        <Label styleClass="labelsLogin" text="Colonia: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+        <Label styleClass="labelsLogin" text="Delegacion / Municipio: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+        <Label styleClass="labelsLogin" text="Estado: " textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+        <TextField fx:id="calle" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+        <TextField fx:id="colonia" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+        <Label font="$x1" text="En el mapa: " textFill="$x2" GridPane.rowIndex="11" />
+        <TextField fx:id="estado" prefWidth="279.0" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+        <TextField fx:id="del_muni" prefWidth="200.0" styleClass="input" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+        <Separator prefWidth="424.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+        <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" styleClass="botones" text="Buscar Ubicacion" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+        <WebView fx:id="browser" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="11" GridPane.rowSpan="4" />
+        <Button fx:id="btn_cancelar" mnemonicParsing="false" onAction="#cancelar" prefWidth="80.0" styleClass="botones" text="Volver" textFill="$x2" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+        <Button fx:id="btn_registrar" mnemonicParsing="false" onAction="#registrar" prefWidth="80.0" styleClass="botones" text="Registrar" textFill="$x2" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="BOTTOM" />
+        <Pane id="estado" fx:id="pane_status" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" GridPane.rowSpan="17" />
+        <PasswordField fx:id="pass" prefWidth="200.0" styleClass="input" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <PasswordField fx:id="Cpass" prefWidth="200.0" styleClass="input" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Label fx:id="aviso" text="" textFill="#cc0000" GridPane.columnIndex="4" GridPane.rowIndex="14" GridPane.valignment="TOP" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="111.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="111.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="135.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="146.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="140.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="20.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="15.0" left="30.0" right="30.0" top="15.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@css/styles.css" />
+  </stylesheets>
+</AnchorPane>

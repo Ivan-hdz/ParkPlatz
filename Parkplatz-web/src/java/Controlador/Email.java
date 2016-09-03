@@ -1,0 +1,164 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Controlador;
+
+import Modelo.Sql;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.xml.ws.WebServiceRef;
+
+/**
+ *
+ * @author honte_000
+ */
+public class Email {
+
+    
+    public String MENSAJE_RECUPERA_CONTRA;
+    private String id;    
+    private String para;
+    public Email(String correo){
+        ;
+        this.para = correo;
+        Seguridad seg = new Seguridad();
+        try {
+            seg.setKey(Seguridad.genKey(correo));
+            id = Seguridad.toSHA256(verContraActual(correo));
+            id = seg.encriptar(id);
+            System.out.println(correo);
+            System.out.println(id+" <---contra cifrado enviado en el email");
+            MENSAJE_RECUPERA_CONTRA = mensajeHTML(para, id);
+          } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
+        }      
+    }
+    private String verContraActual(String correo){
+        String pass = "";
+        try {
+            Connection con = Sql.conectar();
+            PreparedStatement ps = con.prepareStatement("call verContra(?)");
+            ps.setString(1, correo);
+            
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                pass = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return pass;
+    }
+    public boolean enviar(String mensaje){
+        boolean success = false;
+    // Recipient's email ID needs to be mentioned.
+      String to = para;
+
+      // Sender's email ID needs to be mentioned
+      String from = "support@localhost";
+      final String user = "support@localhost";
+      final String pass = "nemesis007";
+      
+      String host = "mail.privateemail.com";
+
+      // Get system properties
+      Properties properties = System.getProperties();
+
+       Properties props = new Properties();
+       props.put("mail.smtp.ssl.trust", host);
+      props.put("mail.smtp.auth", "true");
+      props.put("mail.smtp.starttls.enable", "true");
+      props.put("mail.smtp.host", host);
+
+      // Get the Session object.
+      Session session = Session.getInstance(props,
+      new javax.mail.Authenticator() {
+         @Override
+         protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication(user, pass);
+         }
+      });
+      try{
+         // Create a default MimeMessage object.
+         MimeMessage message = new MimeMessage(session);
+
+         // Set From: header field of the header.
+         message.setFrom(new InternetAddress(from));
+
+         // Set To: header field of the header.
+         message.addRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress(to));
+
+         // Set Subject: header field
+         message.setSubject("Reestablecer contraseña");
+
+         // Send the actual HTML message, as big as you like
+         message.setContent(mensaje, "text/html" );
+        
+         // Send message
+         Transport.send(message);
+         System.out.println("Sent message successfully....");
+         success = true;
+      }catch (javax.mail.MessagingException mex) {
+          System.out.println(mex.getMessage());
+          success = false;
+      }catch(Exception e){
+          success = false;
+      }
+      return success;
+   }
+
+    private String mensajeHTML(String correo, String key) {
+       String html;
+       html = "<body>"
+               +"<style>"
+               + "header{"
+               + "background-color: #141414;"
+               + "border-radius: 5px;"
+               + "color: white;"
+               + "font-family: Arial;"
+               + "}"
+               + "button{"
+               + "background-color: white;"
+               + "color: #141414;"
+               + "border: 1px solid black;"
+               + "border-radius: 5px;"
+               + "transition: all 0.8s"
+               + "}"
+               + "button:hover{"
+               + "color: white;"
+               + "background-color: black;"
+               + "}"
+               + "</style>"
+               + "<header>"
+               + "<h1>¿Has olvidado tu contraseña?</h1>"
+               + "<h2>Puedes recuperarla dando clic en el siguiente BOTON </h2>"
+               + "</header>"
+               + "<a href='http://localhost/Parkplatz-web/recuperame.jsp?email="
+               +correo+"&id="+key+"'>"
+               + "<button type='button'>PRESIONA AQUI </button>"
+               + "</a></body>";
+               
+       return html;
+    }
+
+  
+
+}

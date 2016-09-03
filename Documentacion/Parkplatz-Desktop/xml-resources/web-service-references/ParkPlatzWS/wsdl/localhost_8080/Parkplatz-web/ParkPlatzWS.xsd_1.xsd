@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WS.Controlador/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS.Controlador/">
+
+<xs:element name="ClassNotFoundException" type="tns:ClassNotFoundException"/>
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="NoSuchAlgorithmException" type="tns:NoSuchAlgorithmException"/>
+
+<xs:element name="UnsupportedEncodingException" type="tns:UnsupportedEncodingException"/>
+
+<xs:element name="actualizarDatos" type="tns:actualizarDatos"/>
+
+<xs:element name="actualizarDatosAdmin" type="tns:actualizarDatosAdmin"/>
+
+<xs:element name="actualizarDatosAdminResponse" type="tns:actualizarDatosAdminResponse"/>
+
+<xs:element name="actualizarDatosConductor" type="tns:actualizarDatosConductor"/>
+
+<xs:element name="actualizarDatosConductorResponse" type="tns:actualizarDatosConductorResponse"/>
+
+<xs:element name="actualizarDatosEsta" type="tns:actualizarDatosEsta"/>
+
+<xs:element name="actualizarDatosEstaResponse" type="tns:actualizarDatosEstaResponse"/>
+
+<xs:element name="actualizarDatosResponse" type="tns:actualizarDatosResponse"/>
+
+<xs:element name="actualizarServicio" type="tns:actualizarServicio"/>
+
+<xs:element name="actualizarServicioResponse" type="tns:actualizarServicioResponse"/>
+
+<xs:element name="borrameEsta" type="tns:borrameEsta"/>
+
+<xs:element name="borrameEstaResponse" type="tns:borrameEstaResponse"/>
+
+<xs:element name="eliminarServ" type="tns:eliminarServ"/>
+
+<xs:element name="eliminarServResponse" type="tns:eliminarServResponse"/>
+
+<xs:element name="enviarAviso" type="tns:enviarAviso"/>
+
+<xs:element name="enviarAvisoResponse" type="tns:enviarAvisoResponse"/>
+
+<xs:element name="enviarFeed" type="tns:enviarFeed"/>
+
+<xs:element name="enviarFeedResponse" type="tns:enviarFeedResponse"/>
+
+<xs:element name="enviarFeed_dos" type="tns:enviarFeed_dos"/>
+
+<xs:element name="enviarFeed_dosResponse" type="tns:enviarFeed_dosResponse"/>
+
+<xs:element name="enviarMensajeChat" type="tns:enviarMensajeChat"/>
+
+<xs:element name="enviarMensajeChatResponse" type="tns:enviarMensajeChatResponse"/>
+
+<xs:element name="get_feedback" type="tns:get_feedback"/>
+
+<xs:element name="get_feedbackResponse" type="tns:get_feedbackResponse"/>
+
+<xs:element name="get_misFavs" type="tns:get_misFavs"/>
+
+<xs:element name="get_misFavsResponse" type="tns:get_misFavsResponse"/>
+
+<xs:element name="get_misRecientes" type="tns:get_misRecientes"/>
+
+<xs:element name="get_misRecientesResponse" type="tns:get_misRecientesResponse"/>
+
+<xs:element name="loginAdministrador" type="tns:loginAdministrador"/>
+
+<xs:element name="loginAdministradorResponse" type="tns:loginAdministradorResponse"/>
+
+<xs:element name="loginConductor" type="tns:loginConductor"/>
+
+<xs:element name="loginConductorResponse" type="tns:loginConductorResponse"/>
+
+<xs:element name="loginEstacionamiento" type="tns:loginEstacionamiento"/>
+
+<xs:element name="loginEstacionamientoResponse" type="tns:loginEstacionamientoResponse"/>
+
+<xs:element name="logoutAdministrador" type="tns:logoutAdministrador"/>
+
+<xs:element name="logoutAdministradorResponse" type="tns:logoutAdministradorResponse"/>
+
+<xs:element name="logoutConductor" type="tns:logoutConductor"/>
+
+<xs:element name="logoutConductorResponse" type="tns:logoutConductorResponse"/>
+
+<xs:element name="logoutEstacionamiento" type="tns:logoutEstacionamiento"/>
+
+<xs:element name="logoutEstacionamientoResponse" type="tns:logoutEstacionamientoResponse"/>
+
+<xs:element name="nuevoServicioOferta" type="tns:nuevoServicioOferta"/>
+
+<xs:element name="nuevoServicioOfertaResponse" type="tns:nuevoServicioOfertaResponse"/>
+
+<xs:element name="obtenerMisEstacionamientos" type="tns:obtenerMisEstacionamientos"/>
+
+<xs:element name="obtenerMisEstacionamientosResponse" type="tns:obtenerMisEstacionamientosResponse"/>
+
+<xs:element name="obtenerSevicios" type="tns:obtenerSevicios"/>
+
+<xs:element name="obtenerSeviciosResponse" type="tns:obtenerSeviciosResponse"/>
+
+<xs:element name="recibeFoto" type="tns:recibeFoto"/>
+
+<xs:element name="recibeFotoResponse" type="tns:recibeFotoResponse"/>
+
+<xs:element name="recibirMensajeChat" type="tns:recibirMensajeChat"/>
+
+<xs:element name="recibirMensajeChatResponse" type="tns:recibirMensajeChatResponse"/>
+
+<xs:element name="recibirUltimoChat" type="tns:recibirUltimoChat"/>
+
+<xs:element name="recibirUltimoChatResponse" type="tns:recibirUltimoChatResponse"/>
+
+<xs:element name="recover" type="tns:recover"/>
+
+<xs:element name="recoverResponse" type="tns:recoverResponse"/>
+
+<xs:element name="recuperaEsta" type="tns:recuperaEsta"/>
+
+<xs:element name="recuperaEstaResponse" type="tns:recuperaEstaResponse"/>
+
+<xs:element name="recuperarDatosEsta" type="tns:recuperarDatosEsta"/>
+
+<xs:element name="recuperarDatosEstaResponse" type="tns:recuperarDatosEstaResponse"/>
+
+<xs:element name="registraUnEstacionamiento" type="tns:registraUnEstacionamiento"/>
+
+<xs:element name="registraUnEstacionamientoResponse" type="tns:registraUnEstacionamientoResponse"/>
+
+<xs:element name="registrarAdministrador" type="tns:registrarAdministrador"/>
+
+<xs:element name="registrarAdministradorResponse" type="tns:registrarAdministradorResponse"/>
+
+<xs:element name="registrarConductor" type="tns:registrarConductor"/>
+
+<xs:element name="registrarConductorResponse" type="tns:registrarConductorResponse"/>
+
+<xs:element name="registrarEstacionamiento" type="tns:registrarEstacionamiento"/>
+
+<xs:element name="registrarEstacionamientoResponse" type="tns:registrarEstacionamientoResponse"/>
+
+<xs:element name="ssjjs" type="tns:ssjjs"/>
+
+<xs:element name="ssjjsResponse" type="tns:ssjjsResponse"/>
+
+<xs:element name="toSHA256" type="tns:toSHA256"/>
+
+<xs:element name="toSHA256Response" type="tns:toSHA256Response"/>
+
+<xs:complexType name="recibirMensajeChat">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="recibirMensajeChatResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ClassNotFoundException">
+<xs:sequence>
+<xs:element name="exception" type="tns:throwable" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="throwable">
+<xs:sequence>
+<xs:element name="stackTrace" type="tns:stackTraceElement" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="stackTraceElement" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="logoutEstacionamiento">
+<xs:sequence>
+<xs:element name="objetoEstacionamiento" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estacionamiento">
+<xs:complexContent>
+<xs:extension base="tns:persona">
+<xs:sequence>
+<xs:element name="alturaMaxima" type="xs:float"/>
+<xs:element name="calle" type="xs:string" minOccurs="0"/>
+<xs:element name="colonia" type="xs:string" minOccurs="0"/>
+<xs:element name="cordenadaX" type="xs:double"/>
+<xs:element name="cordenadaY" type="xs:double"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="del_muni" type="xs:string" minOccurs="0"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="horario" type="xs:string" minOccurs="0"/>
+<xs:element name="idEstacionamiento" type="xs:int"/>
+<xs:element name="misEstacionamientos" type="tns:estacionamiento" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreEsta" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="tarifa" type="xs:string" minOccurs="0"/>
+<xs:element name="urlImg" type="xs:string" minOccurs="0"/>
+<xs:element name="aMaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="aPaterno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="persona" abstract="true">
+<xs:sequence>
+<xs:element name="logueado" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutEstacionamientoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="registrarEstacionamiento">
+<xs:sequence>
+<xs:element name="objetoLleno" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarEstacionamientoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UnsupportedEncodingException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NoSuchAlgorithmException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_feedback">
+<xs:sequence>
+<xs:element name="admin" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="administrador">
+<xs:complexContent>
+<xs:extension base="tns:persona">
+<xs:sequence>
+<xs:element name="catFeedback" type="tns:feedback" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="feedLleno" type="xs:boolean"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="aMaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="aPaterno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="feedback">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="idEstaADarAviso" type="xs:int"/>
+<xs:element name="idFeedback" type="xs:int"/>
+<xs:element name="idUsuarioRedactor" type="xs:int"/>
+<xs:element name="prioridad" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_feedbackResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginAdministrador">
+<xs:sequence>
+<xs:element name="objetoConUserPass" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginAdministradorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarServicio">
+<xs:sequence>
+<xs:element name="idServicio" type="xs:int"/>
+<xs:element name="nuevoNombre" type="xs:string" minOccurs="0"/>
+<xs:element name="nuevaDescripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="nuevoCosto" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarServicioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nuevoServicioOferta">
+<xs:sequence>
+<xs:element name="nombreServ" type="xs:string" minOccurs="0"/>
+<xs:element name="descServ" type="xs:string" minOccurs="0"/>
+<xs:element name="costServ" type="xs:float" minOccurs="0"/>
+<xs:element name="idEsta" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nuevoServicioOfertaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutConductor">
+<xs:sequence>
+<xs:element name="objetoConductor" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="conductor">
+<xs:complexContent>
+<xs:extension base="tns:persona">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="misFavs" type="tns:favoritos" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="misFavsLLeno" type="xs:boolean"/>
+<xs:element name="misRecientes" type="tns:recientes" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="misRecientesLleno" type="xs:boolean"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="aMaterno" type="xs:string" minOccurs="0"/>
+<xs:element name="aPaterno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="favoritos">
+<xs:sequence>
+<xs:element name="calle" type="xs:string" minOccurs="0"/>
+<xs:element name="colonia" type="xs:string" minOccurs="0"/>
+<xs:element name="delegacion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreEsta" type="xs:string" minOccurs="0"/>
+<xs:element name="urlImagen" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recientes">
+<xs:sequence>
+<xs:element name="calle" type="xs:string" minOccurs="0"/>
+<xs:element name="colonia" type="xs:string" minOccurs="0"/>
+<xs:element name="delegacion" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="nombreEsta" type="xs:string" minOccurs="0"/>
+<xs:element name="urlImagen" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutConductorResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="get_misFavs">
+<xs:sequence>
+<xs:element name="conductor" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_misFavsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerMisEstacionamientos">
+<xs:sequence>
+<xs:element name="objetoEst" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerMisEstacionamientosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recuperarDatosEsta">
+<xs:sequence>
+<xs:element name="objetoConIdaRecuperar" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recuperarDatosEstaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recover">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recoverResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosEsta">
+<xs:sequence>
+<xs:element name="objetoDatosActualizados" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosEstaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarConductor">
+<xs:sequence>
+<xs:element name="objetoLleno" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarConductorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recibeFoto">
+<xs:sequence>
+<xs:element name="archivoByte" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+<xs:element name="nombreArchivo" type="xs:string" minOccurs="0"/>
+<xs:element name="objetoUsuarioDeFoto" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recibeFotoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarMensajeChat">
+<xs:sequence>
+<xs:element name="autor" type="xs:string" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarMensajeChatResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="logoutAdministrador">
+<xs:sequence>
+<xs:element name="objetoAdministrador" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutAdministradorResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="enviarFeed_dos">
+<xs:sequence>
+<xs:element name="fed" type="tns:feedback" minOccurs="0"/>
+<xs:element name="conductor" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarFeed_dosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="toSHA256">
+<xs:sequence>
+<xs:element name="txt" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="toSHA256Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarAdministrador">
+<xs:sequence>
+<xs:element name="objetoLleno" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarAdministradorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosConductor">
+<xs:sequence>
+<xs:element name="obj" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosConductorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerSevicios">
+<xs:sequence>
+<xs:element name="idEstacionamiento" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerSeviciosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:servicios" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="servicios">
+<xs:sequence>
+<xs:element name="costo" type="xs:float"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="idServicio" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrameEsta">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrameEstaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ssjjs">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ssjjsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recuperaEsta">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recuperaEstaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registraUnEstacionamiento">
+<xs:sequence>
+<xs:element name="ObjetoConDatosNvoEst" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registraUnEstacionamientoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_misRecientes">
+<xs:sequence>
+<xs:element name="conductor" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="get_misRecientesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarAviso">
+<xs:sequence>
+<xs:element name="feed" type="tns:feedback" minOccurs="0"/>
+<xs:element name="admin" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarAvisoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosAdmin">
+<xs:sequence>
+<xs:element name="obj" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:administrador" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarFeed">
+<xs:sequence>
+<xs:element name="Feedback" type="tns:feedback" minOccurs="0"/>
+<xs:element name="Estacionamiento" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarFeedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatos">
+<xs:sequence>
+<xs:element name="objetoConDatosNuevos" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarDatosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarServ">
+<xs:sequence>
+<xs:element name="idServicio" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarServResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recibirUltimoChat">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="recibirUltimoChatResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginConductor">
+<xs:sequence>
+<xs:element name="objetoConUserPass" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginConductorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:conductor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginEstacionamiento">
+<xs:sequence>
+<xs:element name="objetoConUserPass" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginEstacionamientoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estacionamiento" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

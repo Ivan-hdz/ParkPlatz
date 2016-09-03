@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="777.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ServiciosOfertasController">
+  <children>
+    <GridPane fx:id="tabla" gridLinesVisible="false" prefHeight="558.0" prefWidth="743.0" style="-fx-background-color: #ECF0F1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Pane fx:id="menuPane" maxWidth="-Infinity" prefHeight="558.0" prefWidth="242.0" style="" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Button fx:id="btn_inicio" alignment="BOTTOM_LEFT" layoutX="8.0" layoutY="86.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickInicio" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #141414;" text="Inicio" textFill="WHITE">
+              <font>
+                <Font name="Tahoma Bold" size="11.0" fx:id="x3" />
+              </font>
+            </Button>
+            <Button fx:id="btn_info" alignment="BOTTOM_LEFT" disable="false" font="$x3" layoutX="8.0" layoutY="176.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickInfo" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #141414;" text="Información del estacionamiento" textFill="WHITE" underline="false" />
+            <MenuButton alignment="BOTTOM_LEFT" font="$x3" layoutX="8.0" layoutY="131.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #141414;" text="Esquema de estacionamiento" textFill="WHITE">
+              <items>
+                <MenuItem fx:id="btn_esq" mnemonicParsing="false" onAction="#onClickEsquema" text="Crear/Editar esquema" />
+                <MenuItem fx:id="btn_delEsq" mnemonicParsing="false" onAction="#onDelEsq" text="Eliminar esquema" />
+              </items>
+            </MenuButton>
+            <Button id="btn_servicio" alignment="BOTTOM_LEFT" disable="true" font="$x3" layoutX="8.0" layoutY="220.0" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #141414;" text="Servicios y Ofertas" underline="true">
+              <textFill>
+                <Color blue="0.976" green="0.976" red="0.988" fx:id="x4" />
+              </textFill>
+            </Button>
+            <Button fx:id="btn_vivo" alignment="BOTTOM_LEFT" font="$x3" layoutX="8.0" layoutY="264.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickVerEnVivo" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #D32F2F;" text="Ver en vivo" textFill="$x4" />
+            <Button fx:id="btn_feed" alignment="BOTTOM_LEFT" font="$x3" layoutX="8.0" layoutY="309.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickFeed" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #4682B4;" text="Feedback" textFill="$x4" />
+            <Label layoutX="14.0" layoutY="20.0" text="Menú">
+              <font>
+                <Font name="Tahoma Bold" size="43.0" />
+              </font>
+            </Label>
+            <Label fx:id="estado" layoutX="17.0" layoutY="9.0" text="" />
+            <Button fx:id="btn_config" layoutX="189.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickConfig" prefHeight="32.0" prefWidth="32.0" styleClass="btnConfig" text="">
+              <stylesheets>
+                <URL value="@css/styles.css" />
+              </stylesheets>
+            </Button>
+                  <Button fx:id="btn_salir" layoutY="532.0" mnemonicParsing="false" onAction="#cerrar" style="-fx-background-color: #D32F2F;" text="Mis estacionamientos" textFill="WHITE" />
+                  <ImageView fx:id="imgV" fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lbl_nombreEst" layoutX="20.0" layoutY="341.0" prefHeight="17.0" prefWidth="207.0" text="Nombre del estacionamieto">
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Label>
+          </children>
+        </Pane>
+        <Pane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="351.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+          <children>
+            <Button fx:id="btn_nuevo" alignment="CENTER" layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-1.0" mnemonicParsing="false" onAction="#mostrar" prefHeight="30.0" prefWidth="535.0" style="-fx-background-color: #26A65B&#10;&#10;" text="Nuevo servicio u oferta" textFill="WHITE">
+              <stylesheets>
+                <URL value="@css/styles.css" />
+              </stylesheets>
+            </Button>
+            <GridPane fx:id="nuevoServ" layoutX="0.0" layoutY="35.0" prefHeight="210.0" prefWidth="501.0" visible="false">
+              <children>
+                <Label text="Nombre de la oferta:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <textFill>
+                    <Color blue="0.078" green="0.078" red="0.078" fx:id="x1" />
+                  </textFill>
+                </Label>
+                <TextField fx:id="txt_nombreOf" prefHeight="25.0" prefWidth="323.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Descripción:" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Costo:" textFill="$x1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="text_cost" onKeyTyped="#validarCosto" prefHeight="25.0" prefWidth="323.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Button fx:id="btn_crear" contentDisplay="CENTER" mnemonicParsing="false" onAction="#guardarServ" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #32CD32;" text="Crear" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                  <font>
+                    <Font name="System Bold" size="11.0" fx:id="x2" />
+                  </font>
+                </Button>
+                <TextArea fx:id="txt_desc" prefHeight="71.0" prefWidth="501.0" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </Pane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="242.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="501.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="-1.0" minHeight="0.0" prefHeight="529.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

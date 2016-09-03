@@ -1,0 +1,179 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/10/2015, 01:21:49 PM
+    Author     : Emmanuel e Ivan ;)
+*/
+/*Inicio Login Estacionamientos*/
+.fondoOscuro{
+    -fx-background-color: #263238;
+    -fx-background-image: url("../Imagenes/parkFondo.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+.fondoClaro{
+    -fx-background-color: #ECF0F1; 
+    
+}
+.bordes{
+    -fx-border-color: #039BE5;/*Bordes para areas de texto o campos*/
+}
+.fondoImagen{
+    -fx-background-image: url("../Imagenes/autoLogin.jpg");
+    -fx-background-position: center;
+    
+}
+.labelsLogin{
+    -fx-font-face: 'Roboto';
+    -fx-font-color: #FAFAFA;
+    -fx-alignment: center;
+}
+.input{
+    -fx-background-color: #E0E0E0;
+    
+}
+.botones{
+    -fx-background-color: #D32F2F;
+    -fx-border-radius: 60;
+}
+.labelPark{
+    -fx-background-color: #D32F2F;
+    -fx-alignment: center;
+}
+.input:hover{
+    -fx-border-color: #D32F2F;
+}
+.input:focused{
+    -fx-border-color: #D32F2F;
+    -fx-background-color: #ededed;
+}
+.botones:hover{
+    -fx-background-color: #dc5959;
+    -fx-border-color: #F22613;
+}
+/*Fin Login Estacionamientos*/
+/*Menu*/
+.fondoMenu{
+    -fx-background-color: #D32F2F; /*Rojo*/
+    
+}
+.fondoEstacionamiento{
+    -fx-background-color: #ECF0F1;/*Panel que no es el del menu*/
+}
+.botonesCoCu{
+    -fx-background-color: #141414;
+    -fx-font-color: #FAFAFA;
+}
+.botonesGuardar{
+    -fx-background-color: #1565c0;
+}
+.botonesGuardar:hover{
+    -fx-background-color: #42a5f5;
+    -fx-border-color: #E4F1FE;
+}
+
+.botonFeedback
+{
+    -fx-background-color: #0088FF;
+    -fx-font-color: #00008E;
+}
+
+.TextAreaFondonegro .content
+{
+    -fx-background-color: #000000; 
+    -fx-highlight-fill: #00ff00;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #00ff00;
+}
+.TextAreaColorLetra 
+{ 
+    -fx-highlight-fill: #FFFFFF;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #FFFFFF;
+  -fx-background-color: #0000FF;
+}
+.titulo
+{
+    -fx-font-color: #00008E;
+    -fx-font-size: 30;
+}
+
+.TextAreaFondonaranja .content
+{
+    -fx-background-color: #FF9000; 
+}
+
+.botonFeedback
+{
+    -fx-background-color: #0088FF;
+    -fx-font-color: #00008E;
+}
+
+.TextAreaFondonegro .content
+{
+    -fx-background-color: #000000; 
+    -fx-highlight-fill: #00ff00;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #00ff00;
+}
+.TextAreaColorLetra 
+{ 
+    -fx-highlight-fill: #FFFFFF;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #FFFFFF;
+  -fx-background-color: #0000FF;
+}
+.titulo
+{
+    -fx-font-color: #00008E;
+    -fx-font-size: 30;
+}
+
+.TextAreaFondonaranja .content
+{
+    -fx-background-color: #FF9000; 
+}
+
+.botonFeedback
+{
+    -fx-background-color: #0088FF;
+    -fx-font-color: #00008E;
+}
+
+.TextAreaFondonegro .content
+{
+    -fx-background-color: #000000; 
+    -fx-highlight-fill: #00ff00;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #00ff00;
+}
+.TextAreaColorLetra 
+{ 
+    -fx-highlight-fill: #FFFFFF;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: #FFFFFF;
+  -fx-background-color: #0000FF;
+}
+.titulo
+{
+    -fx-font-color: #00008E;
+    -fx-font-size: 30;
+}
+
+.TextAreaFondonaranja .content
+{
+    -fx-background-color: #FF9000; 
+}
+.btnConfig{
+    
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Imagenes/config.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 32px 32px;
+}
+/*Fin configuracion de cuenta*/
+/*Inicio Servicios y ofertas*/
+

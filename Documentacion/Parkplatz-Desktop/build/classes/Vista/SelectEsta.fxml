@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="777.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.SelectEstaController">
+    <stylesheets>
+        <URL value="@/Vista/css/styles.css" />
+    </stylesheets>
+   <children>
+      <GridPane prefHeight="558.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="526.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="32.0" valignment="CENTER" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <FlowPane fx:id="pane" alignment="CENTER" prefHeight="558.0" prefWidth="777.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="imgV" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <effect>
+                  <InnerShadow height="177.91" radius="50.65" width="26.69" />
+               </effect>
+            </FlowPane>
+            <Button mnemonicParsing="false" onAction="#cerrar" style="-fx-background-color: darkred;" text="Cerrar sesión." textFill="WHITE" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#registraOtro" style="-fx-background-color: darkgreen;" text="Registrar nuevo estacionamiento" textAlignment="RIGHT" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+   </children>
+</AnchorPane>

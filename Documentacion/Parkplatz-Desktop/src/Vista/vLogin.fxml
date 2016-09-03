@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0000999999975" styleClass="null" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.LoginController">
+  <children>
+    <GridPane alignment="CENTER" prefHeight="400.0" prefWidth="700.0000999999975" style="-fx-background-color: #D32F2F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="168.0" styleClass="labelPark" text="Parkplatz" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+          <font>
+            <Font size="32.0" />
+          </font>
+          <textFill>
+            <Color blue="0.980" green="0.980" red="0.980" fx:id="x2" />
+          </textFill>
+        </Label>
+        <FlowPane alignment="CENTER" blendMode="SRC_OVER" cache="true" cacheHint="QUALITY" columnHalignment="CENTER" depthTest="ENABLE" hgap="0.0" mouseTransparent="false" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" prefWrapLength="400.0" rowValignment="CENTER" styleClass="fondoOscuro" vgap="5.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+          <children>
+            <Label contentDisplay="CENTER" styleClass="labelsLogin" text="Inicio de sesión" textAlignment="CENTER" textFill="$x2">
+              <effect>
+                <SepiaTone>
+                  <input>
+                    <Bloom threshold="0.0" />
+                  </input>
+                </SepiaTone>
+              </effect>
+              <font>
+                <Font name="System Bold Italic" size="24.0" />
+              </font>
+              <stylesheets>
+                <URL value="@css/styles.css" />
+              </stylesheets>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Correo :" textFill="$x2">
+              <font>
+                <Font name="System Bold" size="16.0" fx:id="x1" />
+              </font>
+            </Label>
+            <TextField fx:id="correo" prefHeight="20.9609375" prefWidth="251.0" promptText="Ingresa tu correo" styleClass="bordesInput, input">
+              <stylesheets>
+                <URL value="@css/styles.css" />
+              </stylesheets>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" text="Contraseña :" textAlignment="CENTER" textFill="$x2" />
+            <PasswordField id="pass" fx:id="contra" onAction="#onEnter" prefWidth="251.0" promptText="Ingresa tu contraseña" styleClass="bordesInput, input" />
+            <GridPane alignment="CENTER">
+              <children>
+                <Button fx:id="btn_iniciar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickIniciar" styleClass="botones, boton" text="Iniciar Sesión" textAlignment="CENTER" textFill="$x2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                  <font>
+                    <Font name="System Bold" size="12.0" />
+                  </font>
+                  <stylesheets>
+                    <URL value="@css/styles.css" />
+                  </stylesheets>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onClickRegistrar" styleClass="botones, boton" text="Registrar" textFill="$x2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                  <font>
+                    <Font size="12.0" />
+                  </font>
+                </Button>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label fx:id="lbl_estado" text="">
+              <font>
+                <Font name="System Italic" size="14.0" />
+              </font>
+            </Label>
+            <Hyperlink fx:id="recuperaContra" onAction="#onClickRecover" text="¿Olvidaste tu contraseña?" textAlignment="JUSTIFY" textFill="#ff7a00" textOverrun="CENTER_ELLIPSIS" underline="true" wrapText="false">
+              <font>
+                <Font name="System Bold Italic" size="14.0" />
+              </font>
+              <FlowPane.margin>
+                <Insets />
+              </FlowPane.margin>
+            </Hyperlink>
+          </children>
+          <stylesheets>
+            <URL value="@css/styles.css" />
+          </stylesheets>
+        </FlowPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-1.0" minWidth="10.0" prefWidth="534.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="166.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

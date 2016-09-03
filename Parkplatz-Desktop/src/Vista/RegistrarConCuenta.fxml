@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="773.0" styleClass="fondoOscuro" stylesheets="@css/styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controlador.RegistrarConCuentaController">
+   <children>
+      <FlowPane alignment="CENTER" hgap="20.0" layoutX="6.0" orientation="VERTICAL" prefHeight="774.0" prefWidth="773.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo estacionamiento">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Label text="Nombre de estacionamiento: " textFill="WHITE" />
+            <TextField fx:id="nombreEst" />
+            <Label text="Calle:" textFill="WHITE" />
+            <TextField fx:id="calle" />
+            <Label text="Colonia:" textFill="WHITE" />
+            <TextField fx:id="colonia" />
+            <Label fx:id="status" text="Estado:" textFill="WHITE" />
+            <TextField fx:id="estado" />
+            <Label text="Delegación/Municipio:" textFill="WHITE" />
+            <TextField fx:id="del_muni" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="En el mapa">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" style="-fx-background-color: darkblue;" styleClass="input" stylesheets="@css/styles.css" text="Buscar ubicacion" textFill="WHITE" />
+            <WebView fx:id="browser" prefHeight="273.0" prefWidth="412.0">
+               <FlowPane.margin>
+                  <Insets top="50.0" />
+               </FlowPane.margin>
+            </WebView>
+            <Button fx:id="btn_registrar" mnemonicParsing="false" onAction="#registrar" style="-fx-background-color: darkgreen;" styleClass="input" stylesheets="@css/styles.css" text="Registrar estacionamiento" textFill="WHITE" />
+            <Button fx:id="btn_cancelar" mnemonicParsing="false" onAction="#cancelar" style="-fx-background-color: darkred;" styleClass="input" stylesheets="@css/styles.css" text="Cancelar" textFill="WHITE" />
+            <Label fx:id="status" style="-fx-background-color: black; -fx-border-radius: 10px;" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </FlowPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>RecuperaPass</servlet-name>
+        <servlet-class>Controlador.RecuperaPass</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletConsultaUsuarios</servlet-name>
+        <servlet-class>Controlador.ServletConsultaUsuarios</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SupportServlet</servlet-name>
+        <servlet-class>Controlador.SupportServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletChatPusher</servlet-name>
+        <servlet-class>Controlador.ServletChatPusher</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecuperaPass</servlet-name>
+        <url-pattern>/RecuperaPass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletConsultaUsuarios</servlet-name>
+        <url-pattern>/ServletConsultaUsuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SupportServlet</servlet-name>
+        <url-pattern>/SupportServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletChatPusher</servlet-name>
+        <url-pattern>/ServletChatPusher</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+</web-app>
