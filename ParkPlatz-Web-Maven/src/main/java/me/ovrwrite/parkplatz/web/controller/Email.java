@@ -20,6 +20,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import me.ovrwrite.parkplatz.web.controller.beans.Constants;
 import me.ovrwrite.parkplatz.web.model.Sql;
 
 /**
@@ -73,29 +74,22 @@ public class Email {
       String to = para;
 
       // Sender's email ID needs to be mentioned
-      String from = "support@localhost";
-      final String user = "support@localhost";
-      final String pass = "nemesis007";
+      String from = "honter1997@gmail.com";
+      final String user = "honter1997@gmail.com";
+      final String pass = "KarenChiquitaBB";
       
-      String host = "mail.privateemail.com";
+      String host = "smtp.gmail.com";
 
       // Get system properties
       Properties properties = System.getProperties();
 
        Properties props = new Properties();
-       props.put("mail.smtp.ssl.trust", host);
+      props.put("mail.smtp.ssl.trust", host);
       props.put("mail.smtp.auth", "true");
       props.put("mail.smtp.starttls.enable", "true");
-      props.put("mail.smtp.host", host);
+      props.put("mail.smtp.port", 587);
 
-      // Get the Session object.
-      Session session = Session.getInstance(props,
-      new javax.mail.Authenticator() {
-         @Override
-         protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication(user, pass);
-         }
-      });
+      Session session = Session.getDefaultInstance(props, null);
       try{
          // Create a default MimeMessage object.
          MimeMessage message = new MimeMessage(session);
@@ -113,7 +107,9 @@ public class Email {
          message.setContent(mensaje, "text/html" );
         
          // Send message
-         Transport.send(message);
+         Transport transport = session.getTransport("smtp");
+         transport.connect("smtp.gmail.com", user, pass);
+         transport.sendMessage(message, message.getAllRecipients());
          System.out.println("Sent message successfully....");
          success = true;
       }catch (javax.mail.MessagingException mex) {
@@ -151,7 +147,7 @@ public class Email {
                + "<h1>¿Has olvidado tu contraseña?</h1>"
                + "<h2>Puedes recuperarla dando clic en el siguiente BOTON </h2>"
                + "</header>"
-               + "<a href='http://localhost/Parkplatz-web/recuperame.jsp?email="
+               + "<a href='http://"+Constants.mainDomain+"/"+ Constants.proyectName +"/recuperame.jsp?email="
                +correo+"&id="+key+"'>"
                + "<button type='button'>PRESIONA AQUI </button>"
                + "</a></body>";

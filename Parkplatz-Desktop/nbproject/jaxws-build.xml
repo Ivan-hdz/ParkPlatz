@@ -4,7 +4,7 @@
         *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
         *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
 
-        --><project xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:xalan="http://xml.apache.org/xslt" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
     <!--
                 ===================
                 JAX-WS WSIMPORT SECTION
@@ -18,8 +18,8 @@
     </target>
     <target name="wsimport-client-ParkPlatzWS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/ParkPlatzWS"/>
-        <property name="wsdl-ParkPlatzWS" location="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost/Parkplatz-web/ParkPlatzWS.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ParkPlatzWS" destdir="${build.generated.dir}/jax-wsCache/ParkPlatzWS" wsdl="${wsdl-ParkPlatzWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost/Parkplatz-web/ParkPlatzWS?wsdl" xnocompile="true" xendorsed="true" package="ParkPlatzWSC">
+        <property name="wsdl-ParkPlatzWS" location="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost/ParkPlatz-Web-Maven/ParkPlatzWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ParkPlatzWS" destdir="${build.generated.dir}/jax-wsCache/ParkPlatzWS" wsdl="${wsdl-ParkPlatzWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost/ParkPlatz-Web-Maven/ParkPlatzWS?wsdl" xnocompile="true" xendorsed="true" package="ParkPlatzWSC">
             <depends file="${wsdl-ParkPlatzWS}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/ParkPlatzWS"/>
         </wsimport>

@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost/Parkplatz-web/ParkPlatzWS?wsdl" uri="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost/Parkplatz-web/ParkPlatzWS.wsdl"/>
     <system systemId="http://localhost:80/Parkplatz-web/ParkPlatzWS?xsd=1" uri="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost_80/Parkplatz-web/ParkPlatzWS.xsd_1.xsd"/>
+    <system systemId="http://localhost/ParkPlatz-Web-Maven/ParkPlatzWS?wsdl" uri="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost/ParkPlatz-Web-Maven/ParkPlatzWS.wsdl"/>
+    <system systemId="http://localhost:80/ParkPlatz-Web-Maven/ParkPlatzWS?xsd=1" uri="xml-resources/web-service-references/ParkPlatzWS/wsdl/localhost_80/ParkPlatz-Web-Maven/ParkPlatzWS.xsd_1.xsd"/>
 </catalog>

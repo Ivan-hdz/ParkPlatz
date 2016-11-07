@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Controlador/Mi_EsquemaController.java</file>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Controlador/ArduinoCanvasUpdater.java</file>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Controlador/MenuPanelController.java</file>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Controlador/VerEnVivoController.java</file>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Controlador/ServiciosOfertasController.java</file>
-            <file>file:/C:/Users/Ivan/Documents/GitHub/Parkplatz/Parkplatz-Desktop/src/Modelo/Database.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/LoginController.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/MenuPanelController.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/ArduinoClient.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/ArduinoCanvasUpdater.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Modelo/Database.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/ConfigCuentaController.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/VerEnVivoController.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/ServiciosOfertasController.java</file>
+            <file>file:/C:/Users/Ivan/Documents/GitHub/ParkPlatz/Parkplatz-Desktop/src/Controlador/Mi_EsquemaController.java</file>
         </group>
     </open-files>
 </project-private>
